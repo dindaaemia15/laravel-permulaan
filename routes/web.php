@@ -133,6 +133,30 @@ Route::get('tambah-data-gaji',function()
     return $gaji;
 });
 
+Route::get('huhu','SekolahController@hallo');
+Route::get('hehe','SekolahController@dunia');
+Route::get('warnakucing/{warna?}','SekolahController@jeniskucing');
+Route::get('warung/{menu?}/{harga?}','SekolahController@warungnasi');
+
+// CRUD BOOK
+Route::get('book','BookController@index');
+Route::get('book-create/{judul}','BookController@create');
+Route::get('book/{id}','BookController@show');
+Route::get('book-edit/{id}/{judul}','BookController@edit');
+Route::get('book-delete/{id}','BookController@delete');
+
+// Artikel
+// Route::get('artikel', 'ArtikelController@index');
+// Route::get('artikel/create', 'ArtikelController@create');
+// Route::get('artikel/{id}', 'ArtikelController@show');
+// Route::get('artikel/{id}/edit', 'ArtikelController@edit');
+// Route::PUT('artikel/{id}', 'ArtikelController@update');
+// Route::DELETE('artikel/{id}/delete', 'ArtikelController@destory');
+Route::resource('artikel','ArtikelController');
+
+
+
+
 
 
 
